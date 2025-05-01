@@ -1,0 +1,1229 @@
+﻿Objective: Generate the complete file structure and functional framework code for the "A1_English_Course" project. The framework should include HTML structure, CSS styling, and working JavaScript modules for core activities. Lesson-specific content (text, data, assets) will be added later.
+Instructions:
+Create the following project structure and file contents exactly as specified:
+1. Project Root Folder:
+* Create: A1_English_Course/
+2. Top-Level File (index.html):
+* Create: A1_English_Course/index.html
+* Content:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>A1 English Course</title>
+   <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <div class="container">
+       <header>
+           <h1>Welcome to the A1 English Course</h1>
+           <p>Your journey to learning English starts here!</p>
+       </header>
+
+       <section id="lesson-list">
+           <h2>Lessons</h2>
+           <ol class="lesson-links">
+               <li>
+                   <span>Week 1:</span> <span class="topic">The Alphabet</span>
+                   <a href="lessons/week1.html" class="button-like">Start Lesson</a>
+               </li>
+               <li>
+                   <span>Week 2:</span> <span class="topic">Vowels & Numbers</span>
+                   <span class="status-badge disabled">Coming Soon</span>
+                    </li>
+               <li>
+                   <span>Week 3:</span> <span class="topic">Who Are You?</span>
+                   <span class="status-badge disabled">Coming Soon</span>
+                   </li>
+               <li><span>Week 4:</span> <span class="topic">Questions & Negatives</span> <span class="status-badge disabled">Coming Soon</span></li>
+                <li><span>Week 5:</span> <span class="topic">My Family & Things</span> <span class="status-badge disabled">Coming Soon</span></li>
+                <li><span>Week 6:</span> <span class="topic">Do You Have...?</span> <span class="status-badge disabled">Coming Soon</span></li>
+                <li><span>Week 7:</span> <span class="topic">Daily Life 1</span> <span class="status-badge disabled">Coming Soon</span></li>
+                <li><span>Week 8:</span> <span class="topic">Daily Life 2</span> <span class="status-badge disabled">Coming Soon</span></li>
+                <li><span>Week 9:</span> <span class="topic">He Works, She Eats</span> <span class="status-badge disabled">Coming Soon</span></li>
+                <li><span>Week 10:</span> <span class="topic">Does He Like Coffee?</span> <span class="status-badge disabled">Coming Soon</span></li>
+                <li><span>Week 11:</span> <span class="topic">Describing Things 1</span> <span class="status-badge disabled">Coming Soon</span></li>
+                <li><span>Week 12:</span> <span class="topic">Describing Things 2</span> <span class="status-badge disabled">Coming Soon</span></li>
+                <li><span>Week 13:</span> <span class="topic">Where Is It?</span> <span class="status-badge disabled">Coming Soon</span></li>
+                <li><span>Week 14:</span> <span class="topic">Is There...? Are There...?</span> <span class="status-badge disabled">Coming Soon</span></li>
+                <li><span>Week 15:</span> <span class="topic">What Are You Doing?</span> <span class="status-badge disabled">Coming Soon</span></li>
+                <li><span>Week 16:</span> <span class="topic">Actions Now & Weather</span> <span class="status-badge disabled">Coming Soon</span></li>
+                <li><span>Week 17:</span> <span class="topic">Yesterday</span> <span class="status-badge disabled">Coming Soon</span></li>
+                <li><span>Week 18:</span> <span class="topic">What Did You Do?</span> <span class="status-badge disabled">Coming Soon</span></li>
+                <li><span>Week 19:</span> <span class="topic">Abilities & Requests</span> <span class="status-badge disabled">Coming Soon</span></li>
+                <li><span>Week 20:</span> <span class="topic">Consolidation & Fun Fair</span> <span class="status-badge disabled">Coming Soon</span></li>
+           </ol>
+       </section>
+
+       <footer>
+           <p>© 2025 Your Course Name</p>
+       </footer>
+   </div>
+   </body>
+</html>
+
+3. lessons/ Folder and Files:
+   * Create Folder: A1_English_Course/lessons/
+   * Create File: A1_English_Course/lessons/week1.html
+   * Content for week1.html:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="lesson-id" content="week1">
+   <title>Week 1 - The English Alphabet</title>
+   <link rel="stylesheet" href="../css/style.css">
+</head>
+<body id="page-week1">
+   <div class="container">
+       <header>
+           <h1>Week 1: The English Alphabet</h1>
+           <p>Recognizing, Comparing, and Writing Letters</p>
+       </header>
+
+       <nav class="lesson-nav">
+           <a href="../index.html" class="nav-button prev">« Back to Lessons</a>
+           <a href="week2.html" class="nav-button next">Next Lesson: Week 2 »</a>
+           </nav>
+
+       <section id="objectives">
+           <h2>Learning Objectives</h2>
+           <ul id="objectives-list">
+               <li>Identify all 26 English letters (capital & lowercase).</li>
+               <li>Match capital letters to lowercase letters.</li>
+               <li>Recognize basic sounds and compare to Hebrew sounds.</li>
+               <li>Practice letter formation.</li>
+           </ul>
+       </section>
+
+       <section id="activity-chart" class="activity-section">
+           <h2>Activity 1: Interactive Alphabet Chart</h2>
+           <p class="activity-instructions">Click each letter to hear its name and sound.</p>
+           <div id="alphabet-chart-grid" class="chart-container">
+               <p class="loading-placeholder">Loading Alphabet Chart...</p>
+           </div>
+            <div id="chart-info-display" class="info-panel" style="display: none;"></div>
+       </section>
+
+       <section id="activity-matching" class="activity-section">
+           <h2>Activity 2: Capital & Lowercase Matching</h2>
+           <p class="activity-instructions">Match the big letters to the small letters.</p>
+           <div id="letter-matching-game-area" class="matching-game-container">
+                <p class="loading-placeholder">Loading Matching Game...</p>
+           </div>
+       </section>
+
+       <section id="activity-comparison" class="activity-section">
+            <h2>Activity 3: Sound Comparison (English/Hebrew)</h2>
+            <p class="activity-instructions">Listen to the English sounds and compare them.</p>
+            <div id="sound-comparison-area" class="comparison-container">
+                <table class="comparison-table" id="sound-comparison-table">
+                    <thead><tr><th>English</th><th>Hebrew</th><th>Listen</th></tr></thead>
+                    <tbody>
+                       <tr><td>B b</td><td><span class="hebrew-char">בּ</span></td><td><button class="button-like sound-compare-button" data-sound-pair="B">Play</button></td></tr>
+                       <tr><td>V v</td><td><span class="hebrew-char">בֿ/ו</span></td><td><button class="button-like sound-compare-button" data-sound-pair="V">Play</button></td></tr>
+                       <tr><td>P p</td><td>(No <span class="hebrew-char">פּ</span>)</td><td><button class="button-like sound-compare-button" data-sound-pair="P">Play</button></td></tr>
+                       <tr><td>F f</td><td><span class="hebrew-char">פ</span></td><td><button class="button-like sound-compare-button" data-sound-pair="F">Play</button></td></tr>
+                       <tr><td>W w</td><td><span class="hebrew-char">ו</span></td><td><button class="button-like sound-compare-button" data-sound-pair="W">Play</button></td></tr>
+                       <tr><td>Th th</td><td>(None)</td><td><button class="button-like sound-compare-button" data-sound-pair="TH">Play</button></td></tr>
+                       <tr><td>R r</td><td><span class="hebrew-char">ר</span> (Diff!)</td><td><button class="button-like sound-compare-button" data-sound-pair="R">Play</button></td></tr>
+                    </tbody>
+                </table>
+                <div id="sound-comparison-audio-controls" style="text-align: center; margin-top: 15px;"></div>
+            </div>
+       </section>
+
+       <section id="activity-writing" class="activity-section">
+           <h2>Activity 4: Writing Practice</h2>
+           <p class="activity-instructions">Select a letter and practice tracing it on the canvas.</p>
+           <div id="writing-practice-area" class="writing-container" style="text-align: center;">
+                <div id="writing-letter-selector">
+                     <p class="loading-placeholder">Loading Letter Selectors...</p>
+                </div>
+                <canvas id="writing-canvas" width="400" height="200" style="background-color: #fff; border: 1px solid #ccc; margin-top: 10px; display: inline-block;"></canvas>
+                <div>
+                    <button id="clear-canvas-button" class="button-like utility-button">Clear Tracing</button>
+                </div>
+           </div>
+       </section>
+
+       <footer>
+           <p>End of Week 1</p>
+            <nav class="lesson-nav">
+               <a href="../index.html" class="nav-button prev">« Back to Lessons</a>
+               <a href="week2.html" class="nav-button next">Next Lesson: Week 2 »</a>
+               </nav>
+       </footer>
+   </div>
+
+   <script src="../js/data/lessonData_w1.js"></script>
+   <script src="../js/modules/audioPlayer.js"></script>
+   <script src="../js/modules/interactiveChart.js"></script>
+   <script src="../js/modules/matchingGame.js"></script>
+   <script src="../js/modules/writingPractice.js"></script>
+   <script src="../js/app.js"></script>
+</body>
+</html>
+
+   * Create empty placeholder files: lessons/week2.html, lessons/week3.html, ... lessons/week20.html. (These should contain basic HTML structure and link to ../css/style.css and the JS files like week1.html, but reference their own data file, e.g., ../js/data/lessonData_w2.js).
+4. css/ Folder and Files:
+      * Create Folder: A1_English_Course/css/
+      * Create File: A1_English_Course/css/style.css
+      * Content for style.css:
+/* style.css - Main stylesheet for the A1 English Course */
+
+/* Basic Reset & Body */
+body {
+   font-family: Arial, sans-serif;
+   line-height: 1.6;
+   margin: 0;
+   background-color: #f4f7f6;
+   color: #333;
+   padding: 20px;
+}
+
+.container {
+   max-width: 950px;
+   margin: auto;
+   background: #fff;
+   padding: 20px 30px;
+   border-radius: 10px;
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Header & Footer */
+header, footer {
+   text-align: center;
+   margin-bottom: 30px;
+   padding-bottom: 15px;
+   border-bottom: 2px solid #4a90e2;
+}
+footer {
+   margin-top: 40px;
+   padding-top: 20px;
+   border-bottom: none;
+   border-top: 1px solid #e1e1e1;
+   font-size: 0.9em;
+   color: #666;
+}
+header h1 { color: #3a7bc8; margin-bottom: 8px; }
+footer p { margin: 0; }
+
+/* Navigation */
+.lesson-nav {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   margin: 25px 0;
+}
+.nav-button {
+   text-decoration: none;
+   color: #4a90e2;
+   font-weight: bold;
+   padding: 10px 18px;
+   border: 1px solid #4a90e2;
+   border-radius: 5px;
+   transition: background-color 0.3s ease, color 0.3s ease;
+   margin: 5px;
+   display: inline-block; /* Ensure proper spacing */
+}
+.nav-button:hover { background-color: #4a90e2; color: #fff; }
+.nav-button.disabled { color: #888; background-color: #f0f0f0; border-color: #dcdcdc; pointer-events: none; }
+
+/* Sections */
+section {
+   background-color: #f8f9fa;
+   border: 1px solid #e3e6e9;
+   border-radius: 8px;
+   padding: 25px;
+   margin-bottom: 25px;
+}
+section h2 {
+   color: #3a7bc8;
+   border-bottom: 1px solid #dee2e6;
+   padding-bottom: 10px;
+   margin-top: 0;
+   margin-bottom: 20px;
+}
+.activity-instructions { font-style: italic; color: #555; margin-bottom: 15px; }
+.loading-placeholder { color: #888; font-style: italic; text-align: center; padding: 20px; }
+.info-panel { background-color: #eef1f3; padding: 15px; border-radius: 5px; margin-top: 15px; border-left: 4px solid #1abc9c; }
+
+/* Utility Buttons */
+.button-like {
+   display: inline-block;
+   padding: 10px 15px;
+   background-color: #5cb85c; /* Green as default */
+   color: white;
+   border: none;
+   border-radius: 5px;
+   margin: 5px;
+   font-size: 0.95em;
+   cursor: pointer;
+   text-decoration: none; /* For <a> tags styled as buttons */
+   text-align: center;
+   transition: background-color 0.3s ease;
+}
+.button-like:hover { background-color: #4cae4c; }
+button.button-like { font-family: inherit; } /* Ensure buttons inherit font */
+.utility-button { background-color: #f0ad4e; } /* Orange for utility */
+.utility-button:hover { background-color: #ec971f; }
+.sound-compare-button { background-color: #5bc0de; } /* Light blue for sound buttons */
+.sound-compare-button:hover { background-color: #31b0d5; }
+.letter-select-button { background-color: #6c757d; } /* Grey for letter selectors */
+.letter-select-button:hover { background-color: #5a6268; }
+
+
+/* Status Badges (for index.html) */
+.status-badge {
+   display: inline-block;
+   padding: 5px 10px;
+   border-radius: 4px;
+   font-size: 0.9em;
+   font-weight: bold;
+}
+.status-badge.disabled { color: #6c757d; background-color: #f8f9fa; border: 1px solid #ddd; }
+
+/* Lesson List (index.html) */
+.lesson-links { list-style: none; padding: 0; }
+.lesson-links li {
+   background: #e9ecef;
+   margin-bottom: 10px;
+   padding: 15px;
+   border-radius: 5px;
+   border-left: 5px solid #4a90e2;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-wrap: wrap; /* Allow wrapping */
+}
+.lesson-links li span:first-child { font-weight: bold; margin-right: 10px; }
+.lesson-links li .topic { flex-grow: 1; margin-right: 10px; color: #444; }
+
+
+/* Specific Activity Container Styles */
+.chart-container .grid-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+   gap: 12px;
+   margin-top: 20px;
+}
+.chart-container .grid-item {
+   border: 1px solid #dcdcdc;
+   padding: 15px 10px;
+   text-align: center;
+   background-color: #fff;
+   border-radius: 6px;
+   cursor: pointer;
+   transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.chart-container .grid-item:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+.chart-container .grid-item strong { font-size: 1.4em; display: block; margin-bottom: 5px; }
+.chart-container .grid-item .phonetic-comparison { font-size: 0.9em; color: #555; }
+.chart-container .grid-item .hebrew-char { font-size: 1.1em; color: #3498db; } /* Hebrew char style */
+.chart-container .grid-item.active { background-color: #d1e7fd; border-color: #4a90e2; } /* Example active state */
+
+.matching-game-container .matching-game-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+   gap: 10px;
+   padding: 10px;
+   margin-top: 15px;
+}
+.matching-game-container .matching-item { /* Inherits .button-like but overrides background */
+   font-size: 1.1em !important;
+   padding: 12px 8px !important;
+   background-color: #6c757d !important; /* Default grey */
+   color: white !important;
+}
+.matching-game-container .matching-item.selected { background-color: #ffc107 !important; color: #333 !important; }
+.matching-game-container .matching-item.matched { background-color: #28a745 !important; color: white !important; cursor: default !important; opacity: 0.7; }
+
+.comparison-container .comparison-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+.comparison-container .comparison-table th, .comparison-container .comparison-table td { border: 1px solid #ddd; padding: 12px; text-align: center; vertical-align: middle; }
+.comparison-container .comparison-table th { background-color: #e9f3fe; color: #3a7bc8; font-weight: 600; }
+.comparison-container .letter-col { font-size: 1.5em; font-weight: bold; }
+.comparison-container .hebrew-char { font-size: 1.2em; color: #3498db; }
+.comparison-container .phonetics { color: #e74c3c; font-weight: bold; }
+
+.writing-container canvas { cursor: crosshair; }
+.writing-container #writing-letter-selector button { margin: 0 5px 10px 5px; }
+
+/* Responsive */
+@media (max-width: 600px) {
+   .container { padding: 15px; }
+   header h1 { font-size: 1.8em; }
+   .lesson-nav { flex-direction: column; align-items: center; }
+   .nav-button { width: 90%; text-align: center; margin-bottom: 10px; }
+   .lesson-links li { flex-direction: column; align-items: flex-start; }
+   .lesson-links li .button-like, .lesson-links li .status-badge { margin-top: 10px; align-self: flex-start; }
+   .chart-container .grid-container { grid-template-columns: repeat(auto-fit, minmax(70px, 1fr)); }
+   .writing-container canvas { width: 95%; height: auto; } /* Adjust canvas size */
+}
+
+5. js/ Folder and Files:
+         * Create Folder: A1_English_Course/js/
+         * Create File: A1_English_Course/js/app.js
+         * Content for app.js:
+// js/app.js - Main application script for the English course
+
+document.addEventListener('DOMContentLoaded', () => {
+   console.log("App.js: DOM fully loaded and parsed.");
+   initializeCurrentLesson();
+});
+
+/**
+* Determines the current lesson from the page and initializes its activities.
+*/
+function initializeCurrentLesson() {
+   const lessonMeta = document.querySelector('meta[name="lesson-id"]');
+   const lessonId = lessonMeta ? lessonMeta.content : null; // e.g., "week1"
+
+   if (!lessonId) {
+       console.log("App.js: Not on a lesson page or lesson ID meta tag not found.");
+       return; // Exit if not a lesson page
+   }
+
+   console.log(`App.js: Initializing lesson: ${lessonId}`);
+
+   // Construct the expected data variable name (e.g., 'week1Data')
+   const lessonDataVarName = `${lessonId}Data`;
+   const lessonData = window[lessonDataVarName];
+
+   if (typeof lessonData === 'undefined') {
+       console.error(`App.js: Lesson data object "${lessonDataVarName}" is not defined or lessonData file wasn't loaded correctly.`);
+       displayErrorMessage(`Could not load data for ${lessonId}.`);
+       return;
+   }
+
+   // --- Initialize Activity Modules ---
+   initInteractiveChart(lessonData);
+   initMatchingGame(lessonData);
+   initSoundComparison(lessonData);
+   initWritingPractice(lessonData);
+   // Add calls to initialize other activity types here later
+
+   console.log(`App.js: ${lessonId} initialization routines complete.`);
+}
+
+/**
+* Initializes the Interactive Chart module if data and elements exist.
+* @param {object} lessonData - The data object for the current lesson.
+*/
+function initInteractiveChart(lessonData) {
+   const sectionElement = document.getElementById('activity-chart');
+   if (!sectionElement) return; // Exit if section doesn't exist
+
+   if (lessonData.alphabetChart && typeof InteractiveChart !== 'undefined') {
+       const targetElement = document.getElementById(lessonData.alphabetChart.targetElementId);
+       if (targetElement) {
+           InteractiveChart.init(
+               lessonData.alphabetChart.targetElementId,
+               lessonData.alphabetChart.letters
+           );
+       } else {
+           console.warn(`App.js: Target element "#${lessonData.alphabetChart.targetElementId}" for InteractiveChart not found.`);
+           sectionElement.innerHTML = '<p>Error: Chart display area not found.</p>';
+       }
+   } else {
+        console.log("App.js: InteractiveChart module or alphabetChart data not defined for this lesson.");
+        sectionElement.innerHTML = '<p>Alphabet chart activity not available for this lesson.</p>';
+   }
+}
+
+/**
+* Initializes the Matching Game module if data and elements exist.
+* @param {object} lessonData - The data object for the current lesson.
+*/
+function initMatchingGame(lessonData) {
+   const sectionElement = document.getElementById('activity-matching');
+   if (!sectionElement) return;
+
+   if (lessonData.matchingGame && typeof MatchingGame !== 'undefined') {
+       const targetElement = document.getElementById(lessonData.matchingGame.targetElementId);
+       if (targetElement) {
+           MatchingGame.init(
+               lessonData.matchingGame.targetElementId,
+               lessonData.matchingGame.pairs,
+               lessonData.matchingGame.gameType
+           );
+       } else {
+          console.warn(`App.js: Target element "#${lessonData.matchingGame.targetElementId}" for MatchingGame not found.`);
+          sectionElement.innerHTML = '<p>Error: Matching game display area not found.</p>';
+       }
+   } else {
+      console.log("App.js: MatchingGame module or matchingGame data not defined for this lesson.");
+      sectionElement.innerHTML = '<p>Matching game activity not available for this lesson.</p>';
+   }
+}
+
+/**
+* Initializes the Sound Comparison buttons if data and elements exist.
+* @param {object} lessonData - The data object for the current lesson.
+*/
+function initSoundComparison(lessonData) {
+   const sectionElement = document.getElementById('activity-comparison');
+   if (!sectionElement) return;
+
+   if (lessonData.soundComparison && typeof AudioPlayer !== 'undefined') {
+       const soundButtonsContainer = document.getElementById('sound-comparison-audio-controls');
+       const soundTable = document.getElementById('sound-comparison-table'); // Get table too
+
+       // Option 1: If buttons are dynamically created
+       if (soundButtonsContainer) {
+           soundButtonsContainer.innerHTML = ''; // Clear placeholder
+           if (lessonData.soundComparison.sounds && lessonData.soundComparison.sounds.length > 0) {
+               lessonData.soundComparison.sounds.forEach(sound => {
+                   const button = document.createElement('button');
+                   button.className = 'button-like sound-compare-button';
+                   button.textContent = sound.label || `Hear ${sound.pairId}`;
+                   button.addEventListener('click', () => playComparisonSound(sound));
+                   soundButtonsContainer.appendChild(button);
+               });
+           } else {
+                soundButtonsContainer.innerHTML = '<p>No comparison sounds defined for this lesson.</p>';
+           }
+       }
+       // Option 2: If buttons are static in the table (like in week1.html example)
+       else if (soundTable) {
+            const staticButtons = soundTable.querySelectorAll('.sound-compare-button[data-sound-pair]');
+            if (staticButtons.length > 0) {
+                staticButtons.forEach(button => {
+                    const pairId = button.getAttribute('data-sound-pair');
+                    const soundData = lessonData.soundComparison.sounds.find(s => s.pairId === pairId);
+                    if (soundData) {
+                        button.addEventListener('click', () => playComparisonSound(soundData));
+                    } else {
+                        button.disabled = true;
+                        button.textContent = 'N/A';
+                    }
+                });
+            } else if (!soundButtonsContainer) { // Only warn if neither dynamic nor static found
+                 console.warn(`App.js: Could not find dynamic container (#${lessonData.soundComparison.targetElementId}) or static buttons for Sound Comparison.`);
+            }
+       }
+
+   } else {
+      console.log("App.js: Sound Comparison data or AudioPlayer module not defined for this lesson.");
+      sectionElement.innerHTML = '<p>Sound comparison activity not available for this lesson.</p>';
+   }
+}
+
+/** Helper function for playing comparison sounds */
+function playComparisonSound(soundData) {
+    if (soundData.englishAudio) {
+       AudioPlayer.play(soundData.englishAudio);
+       // Logic for Hebrew sound (e.g., play after delay, require second click, etc.)
+       if (soundData.hebrewAudio) {
+           console.log(`App.js: Comparison sound available: ${soundData.hebrewAudio}`);
+           // Example: Play after 1 second
+           // setTimeout(() => AudioPlayer.play(soundData.hebrewAudio), 1000);
+       }
+   } else {
+       console.warn(`App.js: No English audio defined for sound pair ${soundData.pairId}`);
+   }
+}
+
+
+/**
+* Initializes the Writing Practice module if data and elements exist.
+* @param {object} lessonData - The data object for the current lesson.
+*/
+function initWritingPractice(lessonData) {
+   const sectionElement = document.getElementById('activity-writing');
+   if (!sectionElement) return;
+
+   if (lessonData.writingPractice && typeof WritingPractice !== 'undefined') {
+       const canvasElement = document.getElementById(lessonData.writingPractice.targetCanvasId);
+       const selectorContainer = document.getElementById('writing-letter-selector');
+       const clearButton = document.getElementById('clear-canvas-button');
+
+       if (canvasElement && selectorContainer && clearButton) {
+          // Dynamically create letter selector buttons
+         selectorContainer.innerHTML = ''; // Clear placeholder
+         if (lessonData.writingPractice.guideLetters && Object.keys(lessonData.writingPractice.guideLetters).length > 0) {
+             Object.keys(lessonData.writingPractice.guideLetters).sort().forEach(letter => {
+                 const button = document.createElement('button');
+                 button.className = 'button-like letter-select-button';
+                 const lower = letter.toLowerCase();
+                 button.textContent = `${letter} ${lower}`;
+                 button.setAttribute('data-trace-letter', letter);
+                 selectorContainer.appendChild(button);
+             });
+
+             // Initialize the WritingPractice module
+             WritingPractice.init(
+                 lessonData.writingPractice.targetCanvasId,
+                 'clear-canvas-button',
+                 '#writing-letter-selector button[data-trace-letter]', // Selector for dynamic buttons
+                 lessonData.writingPractice.guideLetters
+             );
+         } else {
+              selectorContainer.innerHTML = '<p>No letters available for writing practice.</p>';
+              canvasElement.style.display = 'none';
+              clearButton.style.display = 'none';
+         }
+
+       } else {
+          console.warn(`App.js: One or more required elements (canvas, selector container, clear button) for WritingPractice not found.`);
+          sectionElement.innerHTML = '<p>Error: Writing practice display area not found or incomplete.</p>';
+       }
+   } else {
+      console.log("App.js: WritingPractice module or writingPractice data not defined for this lesson.");
+      sectionElement.innerHTML = '<p>Writing practice activity not available for this lesson.</p>';
+   }
+}
+
+/**
+* Displays an error message to the user (basic implementation).
+* @param {string} message - The error message to display.
+*/
+function displayErrorMessage(message) {
+   console.error("Course Error:", message);
+   // Attempt to display error in a dedicated area, fallback to alert
+   const errorDisplay = document.getElementById('error-display-area'); // Add this div to your HTML if needed
+   if (errorDisplay) {
+        errorDisplay.innerHTML = `<p style="color: red; font-weight: bold;">${message}</p>`;
+        errorDisplay.style.display = 'block';
+   } else {
+       alert(`Error loading lesson: ${message}`);
+   }
+}
+
+6. js/modules/ Folder and Files:
+            * Create Folder: A1_English_Course/js/modules/
+            * Create File: A1_English_Course/js/modules/audioPlayer.js
+            * Content for audioPlayer.js:
+// js/modules/audioPlayer.js - Handles audio playback
+
+const AudioPlayer = {
+   currentAudio: null,
+
+   /**
+    * Plays an audio file.
+    * @param {string} audioSrc - Path to the audio file.
+    * @param {boolean} [stopPrevious=true] - Whether to stop any currently playing audio.
+    */
+   play: function(audioSrc, stopPrevious = true) {
+       if (!audioSrc || audioSrc.includes('placeholder')) { // Avoid playing placeholders
+           console.warn(`AudioPlayer: Invalid or placeholder audio source: ${audioSrc}`);
+           return;
+       }
+
+       if (stopPrevious && this.currentAudio) {
+           this.stop();
+       }
+
+       try {
+           this.currentAudio = new Audio(audioSrc);
+           this.currentAudio.play()
+               .then(() => {
+                   console.log(`AudioPlayer: Playing ${audioSrc}`);
+               })
+               .catch(error => {
+                   console.error(`AudioPlayer: Error playing ${audioSrc}:`, error);
+                   this.currentAudio = null;
+               });
+
+           this.currentAudio.onended = () => {
+               this.currentAudio = null;
+           };
+            this.currentAudio.onerror = (e) => {
+                console.error(`AudioPlayer: Error loading audio source ${audioSrc}`, e);
+                this.currentAudio = null;
+            };
+
+       } catch (error) {
+           console.error(`AudioPlayer: Could not create Audio object for ${audioSrc}:`, error);
+           this.currentAudio = null;
+       }
+   },
+
+   /** Stops the currently playing audio, if any. */
+   stop: function() {
+       if (this.currentAudio) {
+           try {
+               this.currentAudio.pause();
+               this.currentAudio.currentTime = 0;
+               console.log("AudioPlayer: Stopped previous audio.");
+           } catch (error) {
+               console.error("AudioPlayer: Error stopping audio:", error);
+           } finally {
+               this.currentAudio = null;
+           }
+       }
+   }
+};
+
+            * Create File: A1_English_Course/js/modules/interactiveChart.js
+            * Content for interactiveChart.js:
+// js/modules/interactiveChart.js - Logic for interactive grid/chart elements
+
+const InteractiveChart = {
+   /**
+    * Initializes the interactive chart/grid.
+    * Dynamically creates grid items based on the provided data.
+    * @param {string} containerId - The ID of the HTML element to build the grid within.
+    * @param {Array} itemsData - Array of objects, each representing an item.
+    */
+   init: function(containerId, itemsData) {
+       const container = document.getElementById(containerId);
+       if (!container) {
+           console.error(`InteractiveChart: Container element with ID "${containerId}" not found.`);
+           return;
+       }
+
+       if (!itemsData || itemsData.length === 0) {
+           console.warn(`InteractiveChart: No items data provided for container "${containerId}".`);
+           container.innerHTML = '<p>No chart items available for this lesson.</p>';
+           return;
+       }
+
+       console.log(`InteractiveChart: Initializing chart in "#${containerId}" with ${itemsData.length} items.`);
+       container.innerHTML = ''; // Clear placeholder
+
+       const grid = document.createElement('div');
+       grid.className = 'grid-container'; // Use class from style.css
+
+       itemsData.forEach(itemData => {
+           const itemElement = this.createGridItem(itemData);
+           itemElement.addEventListener('click', () => this.handleItemClick(itemElement, itemData));
+           grid.appendChild(itemElement);
+       });
+
+       container.appendChild(grid);
+   },
+
+   /** Creates a single grid item HTML element. */
+   createGridItem: function(itemData) {
+       const itemElement = document.createElement('div');
+       itemElement.className = 'grid-item';
+       itemElement.setAttribute('data-letter', itemData.letter);
+
+       const letterDisplay = `<strong>${itemData.letter.toUpperCase()} ${itemData.letter.toLowerCase()}</strong>`;
+       const comparisonDisplay = itemData.hebrewCompare ? `<span class="phonetic-comparison">Like <span class="hebrew-char">${itemData.hebrewCompare}</span></span>` : '';
+
+       itemElement.innerHTML = `${letterDisplay}${comparisonDisplay}`;
+       return itemElement;
+   },
+
+   /** Handles the click event for a specific grid item. */
+   handleItemClick: function(itemElement, itemData) {
+       console.log(`InteractiveChart: Clicked on letter "${itemData.letter}". Data:`, itemData);
+
+       if (typeof AudioPlayer !== 'undefined') {
+           if (itemData.nameAudio) {
+               AudioPlayer.play(itemData.nameAudio);
+               if (itemData.soundAudio) {
+                   setTimeout(() => { AudioPlayer.play(itemData.soundAudio, false); }, 600);
+               }
+           } else if (itemData.soundAudio) {
+               AudioPlayer.play(itemData.soundAudio);
+           }
+       } else {
+           console.warn("InteractiveChart: AudioPlayer module not found.");
+       }
+
+       document.querySelectorAll(`#${itemElement.parentElement.parentElement.id} .grid-item.active`).forEach(active => active.classList.remove('active'));
+       itemElement.classList.add('active');
+       setTimeout(() => itemElement.classList.remove('active'), 700);
+
+       this.updateInfoPanel(itemData);
+   },
+
+   /** Updates an information display panel. */
+   updateInfoPanel: function(itemData) {
+       const panel = document.getElementById('chart-info-display');
+       if (panel) {
+           // Check if AudioPlayer exists before creating buttons that use it
+           const hasAudioPlayer = typeof AudioPlayer !== 'undefined';
+           const playNameButton = hasAudioPlayer && itemData.nameAudio && !itemData.nameAudio.includes('placeholder')
+               ? `<button class="button-like utility-button" onclick="AudioPlayer.play('${itemData.nameAudio}')">Play Name</button>`
+               : `<button class="button-like utility-button" disabled>Play Name</button>`;
+           const playSoundButton = hasAudioPlayer && itemData.soundAudio && !itemData.soundAudio.includes('placeholder')
+               ? `<button class="button-like utility-button" onclick="AudioPlayer.play('${itemData.soundAudio}')">Play Sound</button>`
+               : `<button class="button-like utility-button" disabled>Play Sound</button>`;
+
+           panel.innerHTML = `
+               <h3>Letter: ${itemData.letter.toUpperCase()} ${itemData.letter.toLowerCase()}</h3>
+               <p><strong>Example:</strong> ${itemData.exampleWord || 'N/A'}</p>
+               <p><strong>Hebrew Sound Comparison:</strong> ${itemData.hebrewCompare || 'N/A'}</p>
+               ${playNameButton}
+               ${playSoundButton}
+           `;
+           panel.style.display = 'block';
+       }
+   }
+};
+
+            * Create File: A1_English_Course/js/modules/matchingGame.js
+            * Content for matchingGame.js:
+// js/modules/matchingGame.js - Logic for matching pair games
+
+const MatchingGame = {
+   pairs: [],
+   gameType: 'click-pair',
+   container: null,
+   selectedItem: null,
+   matchedPairs: 0,
+   totalPairs: 0,
+   lockBoard: false, // Prevents clicking during mismatch timeout
+
+   /** Initializes a matching game. */
+   init: function(containerId, pairsData, gameType = 'click-pair') {
+       this.container = document.getElementById(containerId);
+       if (!this.container) {
+           console.error(`MatchingGame: Container element with ID "${containerId}" not found.`);
+           return;
+       }
+       if (!pairsData || pairsData.length === 0) {
+            console.warn(`MatchingGame: No pairs data provided for container "${containerId}".`);
+            this.container.innerHTML = '<p>No matching items available for this lesson.</p>';
+            return;
+       }
+
+       console.log(`MatchingGame: Initializing game type "${gameType}" in "#${containerId}".`);
+       this.container.innerHTML = ''; // Clear placeholder
+
+       this.pairs = pairsData;
+       this.gameType = gameType;
+       this.selectedItem = null;
+       this.matchedPairs = 0;
+       this.totalPairs = pairsData.length;
+       this.lockBoard = false;
+
+       const items = this.shuffleItems(pairsData);
+
+       if (gameType === 'click-pair') {
+           this.createClickPairGame(items);
+       } else {
+           console.warn(`MatchingGame: Game type "${gameType}" not yet implemented.`);
+           this.container.innerHTML = `<p>Game type "${gameType}" coming soon!</p>`;
+       }
+   },
+
+   /** Shuffles items for random display. */
+   shuffleItems: function(pairsData) {
+       let items = [];
+       pairsData.forEach(pair => {
+           // Ensure unique IDs even if content is the same (e.g., word-picture match)
+           const id1 = pair.id1 || `item-${pair.item1}-${Math.random().toString(16).slice(2)}`;
+           const id2 = pair.id2 || `item-${pair.item2}-${Math.random().toString(16).slice(2)}`;
+           items.push({ id: id1, content: pair.item1, pairId: id2 });
+           items.push({ id: id2, content: pair.item2, pairId: id1 });
+       });
+
+       for (let i = items.length - 1; i > 0; i--) {
+           const j = Math.floor(Math.random() * (i + 1));
+           [items[i], items[j]] = [items[j], items[i]];
+       }
+       return items;
+   },
+
+   /** Creates the HTML elements for a 'click-pair' game. */
+   createClickPairGame: function(items) {
+       const gameGrid = document.createElement('div');
+       gameGrid.className = 'matching-game-grid';
+
+       items.forEach(item => {
+           const itemElement = document.createElement('div');
+           // Use button-like class but maybe override specific styles in CSS if needed
+           itemElement.className = 'matching-item button-like';
+           itemElement.innerHTML = item.content; // Use innerHTML in case content has HTML (e.g., images)
+           itemElement.setAttribute('data-id', item.id);
+           itemElement.setAttribute('data-pair-id', item.pairId);
+
+           itemElement.addEventListener('click', (e) => this.handleItemClick(e.currentTarget)); // Use currentTarget
+           gameGrid.appendChild(itemElement);
+       });
+
+       this.container.appendChild(gameGrid);
+   },
+
+   /** Handles clicks on items in the 'click-pair' game. */
+   handleItemClick: function(clickedElement) {
+       if (this.lockBoard || clickedElement.classList.contains('matched') || clickedElement === this.selectedItem) {
+           return; // Ignore click if board locked, already matched, or same item clicked twice
+       }
+
+       clickedElement.classList.add('selected');
+
+       if (!this.selectedItem) {
+           this.selectedItem = clickedElement;
+       } else {
+           // Second item selected - check for match
+           this.lockBoard = true; // Lock board while checking
+           const firstItemPairId = this.selectedItem.getAttribute('data-pair-id');
+           const secondItemId = clickedElement.getAttribute('data-id');
+
+           if (secondItemId === firstItemPairId) {
+               // Match found
+               console.log("MatchingGame: Match found!");
+               this.selectedItem.classList.replace('selected', 'matched');
+               clickedElement.classList.replace('selected', 'matched');
+               if (typeof AudioPlayer !== 'undefined') AudioPlayer.play('../assets/audio/feedback/correct.mp3'); // Example sound path
+               this.matchedPairs++;
+               this.resetSelection();
+               this.checkCompletion();
+               this.lockBoard = false; // Unlock board
+           } else {
+               // No match
+               console.log("MatchingGame: No match.");
+                if (typeof AudioPlayer !== 'undefined') AudioPlayer.play('../assets/audio/feedback/incorrect.mp3'); // Example sound path
+               // Briefly show selection, then hide
+               setTimeout(() => {
+                   this.selectedItem.classList.remove('selected');
+                   clickedElement.classList.remove('selected');
+                   this.resetSelection();
+                   this.lockBoard = false; // Unlock board only after timeout
+               }, 800); // Adjust delay
+           }
+       }
+   },
+
+   /** Resets the selected item state. */
+   resetSelection: function() {
+        this.selectedItem = null;
+   },
+
+   /** Checks if all pairs have been matched. */
+   checkCompletion: function() {
+       if (this.matchedPairs === this.totalPairs) {
+           console.log("MatchingGame: All pairs matched! Game complete.");
+           // Add completion message inside the container
+           const completionMessage = document.createElement('p');
+           completionMessage.textContent = 'Well Done! All matched!';
+           completionMessage.style.color = 'green';
+           completionMessage.style.fontWeight = 'bold';
+           completionMessage.style.textAlign = 'center';
+           completionMessage.style.marginTop = '15px';
+           this.container.appendChild(completionMessage);
+            if (typeof AudioPlayer !== 'undefined') AudioPlayer.play('../assets/audio/feedback/complete.mp3'); // Example sound path
+       }
+   }
+};
+
+            * Create File: A1_English_Course/js/modules/writingPractice.js
+            * Content for writingPractice.js:
+// js/modules/writingPractice.js - Logic for canvas-based writing/tracing practice
+
+const WritingPractice = {
+   canvas: null,
+   ctx: null,
+   drawing: false,
+   lastX: 0,
+   lastY: 0,
+   guideImage: null,
+   currentLetter: null,
+   guideLetterData: {}, // Store guide data locally
+
+   /** Initializes the writing practice canvas. */
+   init: function(canvasId, clearButtonId, letterButtonSelector, guideLetterData) {
+       this.canvas = document.getElementById(canvasId);
+       const clearButton = document.getElementById(clearButtonId);
+       const letterButtons = document.querySelectorAll(letterButtonSelector); // Select buttons dynamically
+
+       if (!this.canvas) { console.error(`WritingPractice: Canvas "#${canvasId}" not found.`); return; }
+       if (!clearButton) { console.warn(`WritingPractice: Clear button "#${clearButtonId}" not found.`); }
+       if (!letterButtons.length) { console.warn(`WritingPractice: No letter buttons found with selector "${letterButtonSelector}".`); }
+       if (!guideLetterData || Object.keys(guideLetterData).length === 0) { console.warn(`WritingPractice: No guide letter data provided.`); }
+
+       this.ctx = this.canvas.getContext('2d');
+       this.guideLetterData = guideLetterData || {}; // Store guide data
+
+       this.setupCanvasStyles();
+       this.addEventListeners();
+
+       if (clearButton) {
+           clearButton.addEventListener('click', () => this.clearCanvas());
+       }
+
+       // Add listeners for dynamically created letter selection buttons
+       letterButtons.forEach(button => {
+           button.addEventListener('click', () => {
+               const letter = button.getAttribute('data-trace-letter');
+               this.loadLetterGuide(letter);
+           });
+       });
+
+       console.log(`WritingPractice: Initialized canvas "#${canvasId}".`);
+       this.clearCanvas(); // Start clear
+   },
+
+   /** Sets initial drawing styles. */
+   setupCanvasStyles: function() {
+       this.ctx.strokeStyle = '#333333'; // Darker ink
+       this.ctx.lineWidth = 4; // Slightly thicker
+       this.ctx.lineJoin = 'round';
+       this.ctx.lineCap = 'round';
+   },
+
+   /** Adds mouse and touch event listeners for drawing. */
+   addEventListeners: function() {
+       const canvas = this.canvas; // Cache canvas element
+
+       // Mouse Events
+       canvas.addEventListener('mousedown', (e) => this.startDrawing(this.getCoords(e)));
+       canvas.addEventListener('mousemove', (e) => this.draw(this.getCoords(e)));
+       canvas.addEventListener('mouseup', () => this.stopDrawing());
+       canvas.addEventListener('mouseout', () => this.stopDrawing());
+
+       // Touch Events
+       canvas.addEventListener('touchstart', (e) => {
+            if (e.touches.length === 1) { // Handle single touch
+                this.startDrawing(this.getCoords(e.touches[0]));
+            }
+        }, { passive: true }); // Improve scroll performance
+
+       canvas.addEventListener('touchmove', (e) => {
+            if (e.touches.length === 1) {
+                e.preventDefault(); // Prevent page scroll ONLY when drawing
+                this.draw(this.getCoords(e.touches[0]));
+            }
+        }, { passive: false }); // Need false to preventDefault
+
+       canvas.addEventListener('touchend', () => this.stopDrawing());
+       canvas.addEventListener('touchcancel', () => this.stopDrawing()); // Handle interruption
+   },
+
+   /** Gets coordinates relative to the canvas. */
+   getCoords: function(e) {
+       const rect = this.canvas.getBoundingClientRect();
+       // Adjust for potential CSS scaling if necessary (more complex)
+       // const scaleX = this.canvas.width / rect.width;
+       // const scaleY = this.canvas.height / rect.height;
+       return {
+           // x: (e.clientX - rect.left) * scaleX,
+           // y: (e.clientY - rect.top) * scaleY
+            x: e.clientX - rect.left,
+            y: e.clientY - rect.top
+       };
+   },
+
+   /** Starts the drawing process. */
+   startDrawing: function(coords) {
+       this.drawing = true;
+       // Begin path immediately to draw starting dot/line segment correctly
+       this.ctx.beginPath();
+       this.ctx.moveTo(coords.x, coords.y); // Move to start point
+       [this.lastX, this.lastY] = [coords.x, coords.y];
+   },
+
+   /** Draws a line from the last point to the current point. */
+   draw: function(coords) {
+       if (!this.drawing) return;
+       this.ctx.lineTo(coords.x, coords.y); // Add line segment to current path
+       this.ctx.stroke(); // Draw the path defined so far
+       // Update last coordinates for the next segment
+       [this.lastX, this.lastY] = [coords.x, coords.y];
+   },
+
+   /** Stops the drawing process. */
+   stopDrawing: function() {
+       if (this.drawing) {
+            this.ctx.closePath(); // Close the current path if needed
+            this.drawing = false;
+       }
+   },
+
+   /** Clears the user's drawing, keeping the guide image. */
+   clearCanvas: function() {
+       // Store current guide state
+       const currentGuideImage = this.guideImage;
+       const currentLetter = this.currentLetter;
+
+       // Clear the entire canvas
+       this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+
+       // If a guide was loaded and is ready, redraw it
+       if (currentGuideImage && currentGuideImage.complete) {
+           try {
+               this.ctx.drawImage(currentGuideImage, 0, 0, this.canvas.width, this.canvas.height);
+               console.log(`WritingPractice: Redrew guide for "${currentLetter}".`);
+           } catch (e) {
+               console.error("WritingPractice: Error redrawing guide image.", e);
+               this.guideImage = null; // Reset if error drawing
+               this.currentLetter = null;
+           }
+       } else if (currentLetter) {
+           // If guide wasn't ready, try loading it again (might happen on fast clears)
+           console.log(`WritingPractice: Guide for "${currentLetter}" wasn't ready, attempting reload on clear.`);
+           this.loadLetterGuide(currentLetter); // This will clear again once loaded
+       }
+       console.log("WritingPractice: User drawing cleared.");
+   },
+
+   /** Loads and displays the tracing guide image. */
+   loadLetterGuide: function(letter) {
+       if (!this.guideLetterData || !this.guideLetterData[letter]) {
+           console.warn(`WritingPractice: No guide data for letter "${letter}". Clearing canvas.`);
+           this.guideImage = null;
+           this.currentLetter = null;
+           this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height); // Clear canvas fully
+           return;
+       }
+
+       this.currentLetter = letter;
+       // Simplified: Assume one guide image per letter (e.g., combined upper/lower)
+       // Prioritize 'upper' if both exist, adjust as needed.
+       const imagePath = this.guideLetterData[letter].upper || this.guideLetterData[letter].lower || this.guideLetterData[letter].combined;
+
+       if (!imagePath || imagePath.includes('placeholder')) {
+           console.warn(`WritingPractice: Invalid or placeholder image path for letter "${letter}". Clearing canvas.`);
+           this.guideImage = null;
+           this.currentLetter = null;
+           this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+           return;
+       }
+
+       console.log(`WritingPractice: Loading guide for "${letter}" from ${imagePath}`);
+
+       // Create a new Image object for the guide
+       const img = new Image();
+       img.onload = () => {
+           console.log(`WritingPractice: Guide image for "${letter}" loaded successfully.`);
+           this.guideImage = img; // Store the loaded image object
+           this.clearCanvas(); // Clear previous drawing and draw the new guide background
+       };
+       img.onerror = () => {
+           console.error(`WritingPractice: Failed to load guide image: ${imagePath}`);
+           // Clear canvas and reset guide state if image fails to load
+           if (this.currentLetter === letter) { // Avoid clearing if another letter was selected quickly
+               this.guideImage = null;
+               this.currentLetter = null;
+               this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+           }
+       };
+       img.src = imagePath; // Start loading the image
+   }
+};
+
+            * Create empty placeholder files for future modules: quizEngine.js, dragDrop.js.
+7. js/data/ Folder and Files:
+               * Create Folder: A1_English_Course/js/data/
+               * Create File: A1_English_Course/js/data/lessonData_w1.js
+               * Content for lessonData_w1.js (with placeholders for assets):
+// js/data/lessonData_w1.js - Data for Week 1 activities
+
+const week1Data = {
+   // --- Data for Interactive Alphabet Chart ---
+   alphabetChart: {
+       targetElementId: 'alphabet-chart-grid', // Matches ID in week1.html
+       letters: [
+           { letter: 'A', nameAudio: '../assets/audio/letters/placeholder.mp3', soundAudio: '../assets/audio/sounds/placeholder.mp3', exampleWord: 'Apple', hebrewCompare: 'אַ/אָ' },
+           { letter: 'B', nameAudio: '../assets/audio/letters/placeholder.mp3', soundAudio: '../assets/audio/sounds/placeholder.mp3', exampleWord: 'Ball', hebrewCompare: 'בּ' },
+           { letter: 'C', nameAudio: '../assets/audio/letters/placeholder.mp3', soundAudio: '../assets/audio/sounds/placeholder.mp3', exampleWord: 'Cat', hebrewCompare: 'ק/ס' },
+           { letter: 'D', nameAudio: '../assets/audio/letters/placeholder.mp3', soundAudio: '../assets/audio/sounds/placeholder.mp3', exampleWord: 'Dog', hebrewCompare: 'ד' },
+           { letter: 'E', nameAudio: '../assets/audio/letters/placeholder.mp3', soundAudio: '../assets/audio/sounds/placeholder.mp3', exampleWord: 'Egg', hebrewCompare: 'אֶ/אֵ/אִ' },
+           { letter: 'F', nameAudio: '../assets/audio/letters/placeholder.mp3', soundAudio: '../assets/audio/sounds/placeholder.mp3', exampleWord: 'Fish', hebrewCompare: 'פ' },
+           { letter: 'G', nameAudio: '../assets/audio/letters/placeholder.mp3', soundAudio: '../assets/audio/sounds/placeholder.mp3', exampleWord: 'Goat', hebrewCompare: 'ג / ג׳' },
+           { letter: 'H', nameAudio: '../assets/audio/letters/placeholder.mp3', soundAudio: '../assets/audio/sounds/placeholder.mp3', exampleWord: 'Hat', hebrewCompare: 'ה' },
+           { letter: 'I', nameAudio: '../assets/audio/letters/placeholder.mp3', soundAudio: '../assets/audio/sounds/placeholder.mp3', exampleWord: 'Igloo', hebrewCompare: 'אִי/אײַ' },
+           { letter: 'J', nameAudio: '../assets/audio/letters/placeholder.mp3', soundAudio: '../assets/audio/sounds/placeholder.mp3', exampleWord: 'Jam', hebrewCompare: 'ג׳' },
+           { letter: 'K', nameAudio: '../assets/audio/letters/placeholder.mp3', soundAudio: '../assets/audio/sounds/placeholder.mp3', exampleWord: 'Kite', hebrewCompare: 'ק' },
+           { letter: 'L', nameAudio: '../assets/audio/letters/placeholder.mp3', soundAudio: '../assets/audio/sounds/placeholder.mp3', exampleWord: 'Lion', hebrewCompare: 'ל' },
+           { letter: 'M', nameAudio: '../assets/audio/letters/placeholder.mp3', soundAudio: '../assets/audio/sounds/placeholder.mp3', exampleWord: 'Moon', hebrewCompare: 'מ' },
+           { letter: 'N', nameAudio: '../assets/audio/letters/placeholder.mp3', soundAudio: '../assets/audio/sounds/placeholder.mp3', exampleWord: 'Nose', hebrewCompare: 'נ' },
+           { letter: 'O', nameAudio: '../assets/audio/letters/placeholder.mp3', soundAudio: '../assets/audio/sounds/placeholder.mp3', exampleWord: 'Octopus', hebrewCompare: 'אוֹ/אָ' },
+           { letter: 'P', nameAudio: '../assets/audio/letters/placeholder.mp3', soundAudio: '../assets/audio/sounds/placeholder.mp3', exampleWord: 'Pen', hebrewCompare: '(No פּ)' },
+           { letter: 'Q', nameAudio: '../assets/audio/letters/placeholder.mp3', soundAudio: '../assets/audio/sounds/placeholder.mp3', exampleWord: 'Queen', hebrewCompare: 'קְוו' },
+           { letter: 'R', nameAudio: '../assets/audio/letters/placeholder.mp3', soundAudio: '../assets/audio/sounds/placeholder.mp3', exampleWord: 'Rabbit', hebrewCompare: 'ר (different!)' },
+           { letter: 'S', nameAudio: '../assets/audio/letters/placeholder.mp3', soundAudio: '../assets/audio/sounds/placeholder.mp3', exampleWord: 'Sun', hebrewCompare: 'ס/שׂ' },
+           { letter: 'T', nameAudio: '../assets/audio/letters/placeholder.mp3', soundAudio: '../assets/audio/sounds/placeholder.mp3', exampleWord: 'Table', hebrewCompare: 'ט/ת' },
+           { letter: 'U', nameAudio: '../assets/audio/letters/placeholder.mp3', soundAudio: '../assets/audio/sounds/placeholder.mp3', exampleWord: 'Umbrella', hebrewCompare: 'אַ/אוּ' },
+           { letter: 'V', nameAudio: '../assets/audio/letters/placeholder.mp3', soundAudio: '../assets/audio/sounds/placeholder.mp3', exampleWord: 'Van', hebrewCompare: 'בֿ / ו' },
+           { letter: 'W', nameAudio: '../assets/audio/letters/placeholder.mp3', soundAudio: '../assets/audio/sounds/placeholder.mp3', exampleWord: 'Watch', hebrewCompare: 'ו (double)' },
+           { letter: 'X', nameAudio: '../assets/audio/letters/placeholder.mp3', soundAudio: '../assets/audio/sounds/placeholder.mp3', exampleWord: 'Box', hebrewCompare: 'קְס' },
+           { letter: 'Y', nameAudio: '../assets/audio/letters/placeholder.mp3', soundAudio: '../assets/audio/sounds/placeholder.mp3', exampleWord: 'Yo-yo', hebrewCompare: 'י/אִי' },
+           { letter: 'Z', nameAudio: '../assets/audio/letters/placeholder.mp3', soundAudio: '../assets/audio/sounds/placeholder.mp3', exampleWord: 'Zebra', hebrewCompare: 'ז' }
+       ]
+   },
+
+   // --- Data for Letter Matching Game ---
+   matchingGame: {
+       targetElementId: 'letter-matching-game-area', // Matches ID in week1.html
+       pairs: [ // Use unique IDs if content might repeat
+           { item1: 'A', item2: 'a', id1: 'match-A', id2: 'match-a' },
+           { item1: 'B', item2: 'b', id1: 'match-B', id2: 'match-b' },
+           { item1: 'C', item2: 'c', id1: 'match-C', id2: 'match-c' },
+           { item1: 'D', item2: 'd', id1: 'match-D', id2: 'match-d' },
+           { item1: 'E', item2: 'e', id1: 'match-E', id2: 'match-e' },
+           { item1: 'F', item2: 'f', id1: 'match-F', id2: 'match-f' },
+           { item1: 'G', item2: 'g', id1: 'match-G', id2: 'match-g' },
+           { item1: 'H', item2: 'h', id1: 'match-H', id2: 'match-h' },
+           { item1: 'I', item2: 'i', id1: 'match-I', id2: 'match-i' },
+           { item1: 'J', item2: 'j', id1: 'match-J', id2: 'match-j' },
+           { item1: 'K', item2: 'k', id1: 'match-K', id2: 'match-k' },
+           { item1: 'L', item2: 'l', id1: 'match-L', id2: 'match-l' },
+           { item1: 'M', item2: 'm', id1: 'match-M', id2: 'match-m' },
+           { item1: 'N', item2: 'n', id1: 'match-N', id2: 'match-n' },
+           { item1: 'O', item2: 'o', id1: 'match-O', id2: 'match-o' },
+           { item1: 'P', item2: 'p', id1: 'match-P', id2: 'match-p' },
+           { item1: 'Q', item2: 'q', id1: 'match-Q', id2: 'match-q' },
+           { item1: 'R', item2: 'r', id1: 'match-R', id2: 'match-r' },
+           { item1: 'S', item2: 's', id1: 'match-S', id2: 'match-s' },
+           { item1: 'T', item2: 't', id1: 'match-T', id2: 'match-t' },
+           { item1: 'U', item2: 'u', id1: 'match-U', id2: 'match-u' },
+           { item1: 'V', item2: 'v', id1: 'match-V', id2: 'match-v' },
+           { item1: 'W', item2: 'w', id1: 'match-W', id2: 'match-w' },
+           { item1: 'X', item2: 'x', id1: 'match-X', id2: 'match-x' },
+           { item1: 'Y', item2: 'y', id1: 'match-Y', id2: 'match-y' },
+           { item1: 'Z', item2: 'z', id1: 'match-Z', id2: 'match-z' }
+       ],
+       gameType: 'click-pair' // Specify game type
+   },
+
+   // --- Data for Sound Comparison ---
+    soundComparison: {
+       targetElementId: 'sound-comparison-audio-controls', // Used if creating buttons dynamically
+       sounds: [ // Corresponds to data-sound-pair in HTML buttons or used dynamically
+            { pairId: 'B', englishAudio: '../assets/audio/sounds/placeholder.mp3', hebrewAudio: '../assets/audio/hebrew_compare/placeholder.mp3', label: "Hear 'B' vs. 'בּ'" },
+            { pairId: 'V', englishAudio: '../assets/audio/sounds/placeholder.mp3', hebrewAudio: '../assets/audio/hebrew_compare/placeholder.mp3', label: "Hear 'V' vs. 'בֿ'" },
+            { pairId: 'P', englishAudio: '../assets/audio/sounds/placeholder.mp3', hebrewAudio: null, label: "Hear 'P' (English)" },
+            { pairId: 'F', englishAudio: '../assets/audio/sounds/placeholder.mp3', hebrewAudio: '../assets/audio/hebrew_compare/placeholder.mp3', label: "Hear 'F' vs. 'פ'" },
+            { pairId: 'W', englishAudio: '../assets/audio/sounds/placeholder.mp3', hebrewAudio: '../assets/audio/hebrew_compare/placeholder.mp3', label: "Hear 'W' vs. 'ו'" },
+            { pairId: 'TH', englishAudio: '../assets/audio/sounds/placeholder.mp3', hebrewAudio: null, label: "Hear 'Th' /θ/" },
+            { pairId: 'R', englishAudio: '../assets/audio/sounds/placeholder.mp3', hebrewAudio: '../assets/audio/hebrew_compare/placeholder.mp3', label: "Hear 'R' vs. 'ר'" },
+       ]
+   },
+
+   // --- Data for Writing Practice ---
+   writingPractice: {
+       targetCanvasId: 'writing-canvas', // Matches ID in week1.html
+       guideLetters: { // Use placeholder paths for assets
+           'A': { upper: '../assets/images/guides/placeholder.svg', lower: '../assets/images/guides/placeholder.svg' },
+           'B': { upper: '../assets/images/guides/placeholder.svg', lower: '../assets/images/guides/placeholder.svg' },
+           'C': { upper: '../assets/images/guides/placeholder.svg', lower: '../assets/images/guides/placeholder.svg' },
+           'D': { upper: '../assets/images/guides/placeholder.svg', lower: '../assets/images/guides/placeholder.svg' },
+           'E': { upper: '../assets/images/guides/placeholder.svg', lower: '../assets/images/guides/placeholder.svg' },
+           'F': { upper: '../assets/images/guides/placeholder.svg', lower: '../assets/images/guides/placeholder.svg' },
+           'G': { upper: '../assets/images/guides/placeholder.svg', lower: '../assets/images/guides/placeholder.svg' },
+           'H': { upper: '../assets/images/guides/placeholder.svg', lower: '../assets/images/guides/placeholder.svg' },
+           'I': { upper: '../assets/images/guides/placeholder.svg', lower: '../assets/images/guides/placeholder.svg' },
+           'J': { upper: '../assets/images/guides/placeholder.svg', lower: '../assets/images/guides/placeholder.svg' },
+           'K': { upper: '../assets/images/guides/placeholder.svg', lower: '../assets/images/guides/placeholder.svg' },
+           'L': { upper: '../assets/images/guides/placeholder.svg', lower: '../assets/images/guides/placeholder.svg' },
+           'M': { upper: '../assets/images/guides/placeholder.svg', lower: '../assets/images/guides/placeholder.svg' },
+           'N': { upper: '../assets/images/guides/placeholder.svg', lower: '../assets/images/guides/placeholder.svg' },
+           'O': { upper: '../assets/images/guides/placeholder.svg', lower: '../assets/images/guides/placeholder.svg' },
+           'P': { upper: '../assets/images/guides/placeholder.svg', lower: '../assets/images/guides/placeholder.svg' },
+           'Q': { upper: '../assets/images/guides/placeholder.svg', lower: '../assets/images/guides/placeholder.svg' },
+           'R': { upper: '../assets/images/guides/placeholder.svg', lower: '../assets/images/guides/placeholder.svg' },
+           'S': { upper: '../assets/images/guides/placeholder.svg', lower: '../assets/images/guides/placeholder.svg' },
+           'T': { upper: '../assets/images/guides/placeholder.svg', lower: '../assets/images/guides/placeholder.svg' },
+           'U': { upper: '../assets/images/guides/placeholder.svg', lower: '../assets/images/guides/placeholder.svg' },
+           'V': { upper: '../assets/images/guides/placeholder.svg', lower: '../assets/images/guides/placeholder.svg' },
+           'W': { upper: '../assets/images/guides/placeholder.svg', lower: '../assets/images/guides/placeholder.svg' },
+           'X': { upper: '../assets/images/guides/placeholder.svg', lower: '../assets/images/guides/placeholder.svg' },
+           'Y': { upper: '../assets/images/guides/placeholder.svg', lower: '../assets/images/guides/placeholder.svg' },
+           'Z': { upper: '../assets/images/guides/placeholder.svg', lower: '../assets/images/guides/placeholder.svg' }
+       }
+   }
+};
+
+               * Create empty files lessonData_w2.js, lessonData_w3.js, ... lessonData_w20.js with just the comment and const weekXData = {};.
+8. assets/ Folder and Subfolders:
+                  * Create the empty folder structure: assets/, assets/audio/, assets/audio/letters/, assets/audio/sounds/, assets/audio/hebrew_compare/, assets/audio/feedback/, assets/images/, assets/images/guides/, assets/images/icons/, assets/images/illustrations/, assets/images/badges/.
+Final Check: Ensure all file paths referenced in HTML (href, src) and JavaScript data objects (nameAudio, imagePath, etc.) correctly reflect the specified folder structure using relative paths (e.g., ../css/style.css, ../assets/audio/letters/placeholder.mp3). The generated JavaScript should be functional and attempt to initialize activities based on the presence of corresponding data and HTML elements.
